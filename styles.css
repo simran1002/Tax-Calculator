@@ -1,4 +1,4 @@
-/* Updated styles for the tax calculator */
+/* Styles for the tax calculator */
 
 .container {
     max-width: 500px;
@@ -30,6 +30,21 @@ label {
     line-height: 20px;
     color: white;
     cursor: pointer;
+    position: relative;
+}
+
+.error-icon:hover::after {
+    content: attr(title);
+    display: block;
+    position: absolute;
+    background-color: #ff8080;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .error-tooltip {

@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        ageError.style.display = 'none';
-        incomeError.style.display = 'none';
-        deductionsError.style.display = 'none';
+        ageError.title = '';
+        incomeError.title = '';
+        deductionsError.title = '';
 
         let valid = true;
         if (!age.value) {
@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function showError(input, errorElement, errorMessage) {
+        errorElement.title = errorMessage;
         errorElement.style.display = 'block';
         errorElement.textContent = '!';
         input.classList.add('invalid-input');
