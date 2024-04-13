@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let valid = true;
         if (!age.value) {
-            showError(age, ageError, 'Age is required.');
+            showError(age, ageError, 'Please select an age group.');
             valid = false;
         }
         if (!income.value) {
