@@ -74,16 +74,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (taxableIncome <= 0) {
             return 0;
         } else {
-            switch (age) {
-                case '<40':
-                    return 0.3 * taxableIncome;
-                case '>=40&<60':
-                    return 0.4 * taxableIncome;
-                case '>=60':
-                    return 0.1 * taxableIncome;
-                default:
-                    return 0;
+            if (age === '<40') {
+                return 0.3 * taxableIncome;
+            } else if (age === '>=40&<60') {
+                return 0.4 * taxableIncome;
+            } else if (age === '>=60') {
+                return 0.1 * taxableIncome;
             }
+            return 0;
         }
     }
 });
